@@ -37,7 +37,7 @@ Reset the SPI flash:
 
 ```bash
 devicesize=$(blockdev --getsz /dev/mtdblock0)
-dd if=/dev/zero of=/dev/mtdblock0 bs=1M count=$devicesize status=progress && sync
+dd if=/dev/zero of=/dev/mtdblock0 bs=512 count=$devicesize status=progress && sync
 ```
 
 Flash the U-Boot binary:
